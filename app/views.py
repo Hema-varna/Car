@@ -32,9 +32,7 @@ def RegisterView(request):
     }
     if request.method=='POST':
         form = Registerform(request.POST)
-        if form.is_valid():   
-            var=AuthenticationForm()
-            context={'form':var}
+        if form.is_valid():
             form.save()
-            return render(request,'login.html',context)
+            return redirect('LoginView')
     return render(request,'register.html',context)
