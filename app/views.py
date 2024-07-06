@@ -34,5 +34,5 @@ def RegisterView(request):
         form = Registerform(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('LoginView')
+            return redirect('login')
     return render(request,'register.html',context)
