@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    {% for i in var %}
+    <div style="display: inline-block;">
+        <figure>
+            <img src="{{i.cimage.url}}" alt="{{i.cname}}">
+            <figcaption><h3>{{i.cname}}</h3></figcaption>
+        </figure>
+    </div>
+    {% endfor %}
+</body>
+</html>
